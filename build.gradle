@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'dk.haffgaard'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.google.photos.library:google-photos-library-client:1.6.1'
+    implementation 'com.google.code.gson:gson:2.8.8'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+application {
+    mainClass = 'dk.haffgaard.google.photos.backup.Main'
+}
+
+test {
+    useJUnitPlatform()
+}
